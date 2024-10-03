@@ -1,0 +1,41 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Dependency directories
+/backend/node_modules
+/frontend/node_modules
+
+# Production build
+/frontend/build
+/backend/build
+
+# Environment variable files
+/backend/.env
+/frontend/.env
+
+# Ignore cache files
+/cache
+/tmp
+
+# Ignore IDE specific files
+.vscode/
+.idea/
+
+# Ignore OS generated files
+.DS_Store
+Thumbs.db
+
+# Ignore coverage folder
+/coverage
+
+# Ignore dist and public folder if applicable (for frontend)
+/frontend/dist
+/frontend/public
+
+# Ignore any custom directories or files
+/backend/dist
+
