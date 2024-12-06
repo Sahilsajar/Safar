@@ -88,3 +88,15 @@ a{
 .gap1 {
     gap: 1rem;
 }
+.gap3 {
+    gap: 3rem;
+}
+
+.gap5 {
+    gap: 5rem;
+}
+
+.w400-container{
+    width: 100%;
+    max-width: 400px;
+}

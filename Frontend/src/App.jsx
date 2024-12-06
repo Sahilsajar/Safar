@@ -9,6 +9,7 @@ import AdminUsers from "./pages/admin/AdminUsers";
 import AdminBooking from "./pages/admin/AdminBooking";
 import AdminBus from "./pages/admin/AdminBus";
 import AdminHome from "./pages/admin/AdminHome";
+import BookingPage from "./pages/BookingPage";
 import PublicRoutes from "./components/PublicRoutes";
 import PrivateRoute from "./components/PrivateRoute";
 import DefaultLayout from "./components/DefaultLayout";
@@ -38,10 +39,10 @@ function App() {
             }
           ></Route>
           <Route
-            path="/admin/bookings"
+            path="/admin/bookings/:id"
             element={
               <PrivateRoute>
-                <AdminBooking />
+                <BookingPage />
               </PrivateRoute>
             }
           ></Route>
@@ -55,6 +56,14 @@ function App() {
           ></Route>
           <Route
             path="/admin/Home"
+            element={
+              <PrivateRoute>
+                <AdminHome />
+              </PrivateRoute>
+            }
+          ></Route>
+          <Route
+            path="/Home/booking"
             element={
               <PrivateRoute>
                 <AdminHome />

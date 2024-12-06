@@ -1,6 +1,7 @@
 const router = require("express").Router();
 
 const bus = require("../model/busModel");
+const { route } = require("./userRoute");
 
 //Add a bus route
 router.post("/add", async (req, res) => {
@@ -89,6 +90,26 @@ router.put("/editbus/:id", async (req, res) => {
       message: "Bus details updated successfully",
       success: true,
       data: existBus,
+    });
+  } catch (error) {
+    console.log(error);
+    return res.status(500).send({
+      message: "Error 500",
+      success: false,
+    });
+  }
+});
+
+//Get bus by id for booking page in front end;
+
+router.get("/getbus/:id", async (req, res) => {
+  try {
+    const busId = req.params.id;
+    const busDetail = await bus.findById(busId);
+    return res.send({
+      message: "Bus detail",
+      success: true,
+      body: busDetail,
     });
   } catch (error) {
     console.log(error);
